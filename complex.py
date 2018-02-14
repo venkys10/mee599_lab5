@@ -8,14 +8,17 @@ class Complex:
     def __init__(self, re = 0.0, im = 0.0):
         self.re = re
         self.im = im
-        self.number = self.re,  "+",self.im,"i"
+
 
     def __str__(self):
-        return str(self.number)
+        if self.im >= 0:
+            return "("+str(self.re)  +" + "+ str(self.im) + "i"+")"
+        else:
+            return "("+str(self.re)  +" - "+ str(abs(self.im)) + "i"+")"
 
 
 if __name__  == '__main__':
-    a = Complex(2)
+    a = Complex(2,3)
     print a
 
 

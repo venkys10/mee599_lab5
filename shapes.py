@@ -8,7 +8,12 @@ class Circle:
 
     def __init__(self, radius):
         self.radius = radius
+        try:
+            if self.radius >= 0:
+                pass
+        except:
 
+            print "enter a radius value greater than 0"
     def area(self):
         area = math.pi*(self.radius**2)
         return area
@@ -37,7 +42,7 @@ class Rectangle:
 
 
 if __name__ == '__main__':
-    c = Circle(3)
+    c = Circle(-3)
     a = c.area()
     d = c.diameter()
     p = c.perimeter()
