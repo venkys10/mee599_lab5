@@ -5,6 +5,7 @@ import math
 
 #Area, diameter and perimeter of a CIRCLE
 class Circle:
+
     def __init__(self, radius):
         self.radius = radius
 
@@ -19,7 +20,6 @@ class Circle:
     def perimeter(self):
         perimeter = 2*math.pi*self.radius
         return perimeter
-
 
 #class for area and perimeter of a RECTANGLE
 class Rectangle:
