@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 import math
-
+import sys
 
 #Area, diameter and perimeter of a CIRCLE
 class Circle:
@@ -9,11 +9,14 @@ class Circle:
     def __init__(self, radius):
         self.radius = radius
         try:
-            if self.radius >= 0:
-                pass
+            if self.radius <= 0:
+                print "enter a radius value greater than 0"
+                self.area = pass
+                self.diameter = pass
+                self.perimeter = pass
         except:
 
-            print "enter a radius value greater than 0"
+            pass
     def area(self):
         area = math.pi*(self.radius**2)
         return area
@@ -31,6 +34,16 @@ class Rectangle:
     def __init__(self, length, width):
         self.length = length
         self.width = width
+        try:
+            if self.length <= 0:
+                print "enter a length value greater than 0"
+            elif self.width <= 0:
+                print "enter a 'width' value greater than 0"
+                self.area = None
+                self.perimeter = None
+        except:
+
+            pass
 
     def area(self):
         area = self.length * self.width
@@ -47,7 +60,7 @@ if __name__ == '__main__':
     d = c.diameter()
     p = c.perimeter()
 
-    r = Rectangle(2,3)
+    r = Rectangle(2,-3)
     ar = r.area()
     pe = r.perimeter()
 
